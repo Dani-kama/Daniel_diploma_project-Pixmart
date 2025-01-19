@@ -242,7 +242,6 @@ button {
 
 .hero {
     background: linear-gradient(90deg, rgb(240, 246, 253) 44%, var(--color-bg-base) 100%);
-    z-index: -1;
 }
 
 .hero__content {
