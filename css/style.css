@@ -1619,8 +1619,10 @@ article.categories__cards:hover svg {
     line-height: var(--font-line-height-heroes);
     letter-spacing: -0.5px;
     margin: 0;
-    padding: 64px 0 100px 0;
+    padding: 64px 0px 100px 0px;
     max-width: min-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .side-filters__form-price,
@@ -1784,14 +1786,15 @@ article.categories__cards:hover svg {
     content: "";
     display: inline-block;
     background-color: var(--color-bg-base);
-    outline: 2px solid rgba(31, 50, 71, 0.27);
+    outline: 1px solid rgba(31, 50, 71, 0.27);
     border-radius: 4px;
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     left: 0px;
-    top: -2px;
+    top: 0px;
     position: absolute;
     margin: 5px;
+    outline-offset: -0.5px;
 }
 
 .side-filters__categories-check-box:hover+ .side-filters__categories-check-label:before {
@@ -1818,10 +1821,10 @@ article.categories__cards:hover svg {
 
 .side-filters__categories-check-box:checked+ .side-filters__categories-check-label:before {
     background-color: var(--color-brand);
-    outline: 2px solid var(--color-brand);
+    outline: 1px solid var(--color-brand);
     background-image: url(/img/mark_checkbox.svg);
     background-repeat: no-repeat;
-    background-position: 2px 4px;
+    background-position: center;
 }
 
 .side-filters__categories-check-box:checked:hover+ .side-filters__categories-check-label:before {
@@ -1853,7 +1856,7 @@ article.categories__cards:hover svg {
 .toggle-wrapper {
     display: flex;
     align-items: center;
-    margin-left: -28px;
+    margin-left: -30px;
 }
 
 .side-filters__style-toggle {
@@ -1980,9 +1983,14 @@ article.categories__cards:hover svg {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    border: 2px solid rgba(29, 54, 83, 0.17);
+    outline: 2px solid rgba(29, 54, 83, 0.17);
     border-radius: 8px;
     padding: 8px 20px 8px 20px;
+    background: rgb(255, 255, 255);
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .content {
@@ -1990,17 +1998,12 @@ article.categories__cards:hover svg {
     flex-direction: column;
 }
 
-.content__filters-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.content__filters-view {
+.content__filters-view-wrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .visually-hidden {
@@ -2113,14 +2116,18 @@ article.categories__cards:hover svg {
 .content__tags-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 8px;
+    padding-top: 24px;
+    overflow: hidden;
+    max-width: 1030px;
+    white-space: nowrap;
 }
 
 .content__tag-item {
-    padding: 6px 12px 7px 12px;
-    box-shadow: 0 0 1px rgba(29, 54, 83, 0.17);
+    padding: 5px 11px 5px 11px;
+    border: 1px solid rgba(29, 54, 83, 0.17);
     border-radius: 8px;
     color: var(--color-text-primary);
     font-family: var(--font-family-secondary);
@@ -2131,9 +2138,13 @@ article.categories__cards:hover svg {
     text-align: center;
     height: 32px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
     align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
 }
 
 .content__tag-button {
