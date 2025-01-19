@@ -377,13 +377,39 @@ span.hero__accent {
 }
 
 .hero__img-container:before {
-content: "";
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-image: url('/img/hero_icon_befor.svg');
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    background-image: url(img/sprite.svg#hero_icon_befor);
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 446px;
+    left: 30px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.08);
+    background-color: rgb(255, 255, 255);
+}
+
+.hero__img-container:after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-image: url('/img/hero_icon_after.svg');
+    position: absolute;
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 9px;
+    left: 494px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 40px 0px rgba(29, 57, 95, 0.08);
+    background-color: rgb(255, 255, 255);
 }
 
 .hero__img-examples {
