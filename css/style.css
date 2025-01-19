@@ -373,6 +373,17 @@ span.hero__accent {
     grid-template-rows: 3.5% 31%;
     grid-gap: 32px;
     max-width: 624px;
+    position: relative;
+}
+
+.hero__img-container:before {
+content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(img/sprite.svg#hero_icon_befor);
 }
 
 .hero__img-examples {
