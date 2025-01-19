@@ -1872,7 +1872,8 @@ article.categories__cards:hover svg {
 .side-filters__style-toggle-label {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    padding-left: 30px;
 }
 
 .toggle-slider {
@@ -1985,12 +1986,13 @@ article.categories__cards:hover svg {
     gap: 8px;
     outline: 2px solid rgba(29, 54, 83, 0.17);
     border-radius: 8px;
-    padding: 8px 20px 8px 20px;
+    padding: 10px 20px 9px 20px;
     background: rgb(255, 255, 255);
     flex-wrap: nowrap;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    outline-offset: -2px;
 }
 
 .side-filters__form-reset svg {
@@ -2043,18 +2045,26 @@ article.categories__cards:hover svg {
     position: relative;
 }
 
-.content__filters-select-item:after {
+.content__filters-select-input-wrap {
+    position: relative;
+}
+
+.content__filters-select-input-wrap:after {
     content: '';
     position: absolute;
-    right: 27px;
+    right: 22px;
+    top: 10px;
     display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url("img/chevron_down.svg");
-    outline: 2px solid rgba(29, 54, 83, 0.17);
+    width: 17px;
+    height: 17px;
+    background: url("/img/chevron_down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
     border-radius: 8px;
     transform: rotate(360deg);
     padding: 2px;
+    color: rgb(13, 13, 21);
+    pointer-events: none;
 }
 
 .content__filters-select-item {
@@ -2371,6 +2381,7 @@ position: relative;
     margin-inline: auto;
     border: 2px solid rgba(29, 54, 83, 0.17);
     border-radius: 8px;
+    background: rgb(255,255,255);
 }
 
 .blog-details {
