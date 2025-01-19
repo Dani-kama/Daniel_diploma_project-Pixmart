@@ -1993,6 +1993,12 @@ article.categories__cards:hover svg {
     text-overflow: ellipsis;
 }
 
+.side-filters__form-reset svg {
+    width: 24px;
+    height: 24px;
+    color: inherit;
+}
+
 .content {
     display: flex;
     flex-direction: column;
