@@ -1645,6 +1645,11 @@ article.categories__cards:hover svg {
     font-weight: var(--font-weight-extra);
     line-height: 32px;
     letter-spacing: 0px;
+    white-space: nowrap;
+    max-width: 217px;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
 }
 
 .side-filters__style-wrap,
@@ -1679,6 +1684,11 @@ article.categories__cards:hover svg {
     line-height: var(--font-line-height-small);
     letter-spacing: 0px;
     padding-left: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 217px;
+    text-overflow: ellipsis;
+    display: block;
 
 }
 
@@ -1776,8 +1786,6 @@ article.categories__cards:hover svg {
 }
 
 .side-filters__categories-check-label {
-    display: inline-flex;
-    align-items: center;
     user-select: none;
     position: relative;
 }
@@ -1786,12 +1794,12 @@ article.categories__cards:hover svg {
     content: "";
     display: inline-block;
     background-color: var(--color-bg-base);
-    outline: 1px solid rgba(31, 50, 71, 0.27);
+    outline: 2px solid rgba(31, 50, 71, 0.27);
     border-radius: 4px;
     width: 12px;
     height: 12px;
-    left: 0px;
-    top: 0px;
+    left: 1px;
+    top: -1px;
     position: absolute;
     margin: 5px;
     outline-offset: -0.5px;
@@ -1821,10 +1829,10 @@ article.categories__cards:hover svg {
 
 .side-filters__categories-check-box:checked+ .side-filters__categories-check-label:before {
     background-color: var(--color-brand);
-    outline: 1px solid var(--color-brand);
+    outline: 2px solid var(--color-brand);
     background-image: url(/img/mark_checkbox.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 2px 3.5px;
 }
 
 .side-filters__categories-check-box:checked:hover+ .side-filters__categories-check-label:before {
@@ -2217,6 +2225,10 @@ article.categories__cards:hover svg {
     display: none;
 }
 
+.content__card {
+    max-width: 325px;
+}
+
 /* alignment after removing buttons */
 /* ----------------------------------------- */
 .sold_out .content__price {
@@ -2291,11 +2303,17 @@ position: relative;
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
 
 .content__card-description {
     display: flex;
     max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .content__cards-category {
@@ -2308,7 +2326,7 @@ position: relative;
     text-align: left;
 }
 
-.content__cards-category:nth-of-type(1)::after {
+.content__cards-category:not(:last-of-type):after {
     content: "·";
     display: inline-block;
     font-size: var(--font-size-small);
@@ -2325,6 +2343,9 @@ position: relative;
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
+    gap: 12px;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 .content__price {
@@ -2352,8 +2373,9 @@ position: relative;
     align-items: center;
     padding: 6px;
     width: 37px;
-    height: 38px;
+    height: 37px;
     background-color: var(--color-bg-base);
+    border: 2px solid  transparent;
 }
 
 .content__button-cart {
