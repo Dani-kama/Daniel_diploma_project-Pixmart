@@ -2835,8 +2835,8 @@ blockquote.blog-details__quote {
 }
 
 .blog-details__cards-container {
-    margin-top: 134px;
-    padding-block: 38px;
+    margin-top: 132px;
+    padding-block: 40px;
     background: rgb(240, 246, 253);
 }
 
@@ -2908,13 +2908,14 @@ transform: rotate(180deg);
 .blog-details__card::before {
     content: "TAG";
     position: absolute;
-    top: 247px;
-    left: 15px;
+    top: 252px;
+    left: 16px;
     background-color: var(--color-brand);
-    border-radius: 100px;
+    border-radius: 56px;
     color: rgb(245, 248, 251);
-    height: 34px;
-    padding: 0px 16px 10px 16px;
+    padding: 8px 16px 8px 16px;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 .blog-details__cards-image {
