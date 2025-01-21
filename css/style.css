@@ -3008,16 +3008,17 @@ transform: rotate(180deg);
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px 8px 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 8px;
     background: var(--color-brand);
     margin-top: 32px;
     height: 64px;
     border: none;
+    display: block;
+    max-width: 618px;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
 }
 
 .contact__information-list {
@@ -3033,6 +3034,7 @@ transform: rotate(180deg);
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .contact__item-link {
@@ -3054,6 +3056,9 @@ transform: rotate(180deg);
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .contact__working-days {
