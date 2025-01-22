@@ -3,11 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<meta name="description" content="description text">-->
-        <!--<meta name="keywords" content=" tags words">-->
-        <!-- <meta name="copyright" content="my name"> -->
+        <meta name="description" content="Pixmart – ready-made website templates, presentations, and graphics for your projects. High-quality, stylish, and user-friendly solutions for business and creativity. Start creating today!">
         <title>PixMart</title>
-        <!-- place for icons and favicons -->
+        <link rel="icon" href="img/favicons/favicon_16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="img/favicons/favicon_32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="img/favicons/favicon_48.png" sizes="48x48" type="image/png">
+        <link rel="icon" href="img/favicons/favicon_64.png" sizes="64x64" type="image/png">
+        <link rel="icon" href="img/favicons/favicon_svg.svg" sizes="any" type="image/svg+xml">
+        <link rel="icon" href="img/favicons/favicon_ico.ico" type="image/x-icon">
+        <meta name="theme-color" content="rgb(2, 101, 220)">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -66,7 +70,7 @@
             </form>
             <a
                 href="/#"
-                class="header__card-button"
+                class="header__card-button brand-color-button"
                 title="Go to the Cart"
             >
                 <svg
@@ -81,74 +85,63 @@
 
         <main class="section-gap-container">
 
-            <section class="hero container">
-                <div class="hero__text-container">
-                    <h1 class="hero__title">
-                        <span class="block-line">Craft Your</span>
-                        <span class="block-line">Success with</span>
-                        <span class="block-line">Our
-                            <span class="hero__accent">
-                                Digital
-                            </span> 
-                            Assets
-                        </span>
-                    </h1>
-                    <p class="hero__slogan">
-                        From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.
-                    </p>
-                    <div class="hero__buttons-wrap">
-                        <a class="hero__buttons" href="catalog.html">
-                            Shop Now
-                        </a>
-                        <a
-                            class="hero__buttons-social"
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <svg
-                                class="hero__button-img"
-                                width="14"
-                                height="16"
+            <section class="hero">
+                <div class="hero__content container">
+                    <div class="hero__text-container">
+                        <h1 class="hero__title">
+                            Craft Your Success&#160;with Our&#160;<span class="hero__accent">Digital</span>&#160;Assets
+                        </h1>
+                        <p class="hero__slogan">
+                            From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.
+                        </p>
+                        <div class="hero__buttons-wrap">
+                            <a class="hero__buttons brand-color-button" href="catalog.html">
+                                Shop Now
+                            </a>
+                            <a
+                                class="hero__buttons-social"
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
-                                <use xlink:href="img/sprite.svg#play-ico"></use>
-                            </svg>
-                            Watch About Us
-                        </a>
+                                <svg
+                                    class="hero__button-img"
+                                    width="14"
+                                    height="16"
+                                >
+                                    <use xlink:href="img/sprite.svg#play-ico"></use>
+                                </svg>
+                                Watch About Us
+                            </a>
+                        </div>
                     </div>
+                    <figure class="hero__img-container">
+                        <img
+                            src="img/ui_hero.webp"
+                            alt="Ui design"
+                            class="hero__image-ui"
+                            width="281"
+                            height="422"
+                        >
+                        <img
+                            src="img/screens_hero.webp"
+                            alt="Event screens"
+                            class="hero__img-screens"
+                            width="514"
+                            height="299"
+                        >
+                        <img
+                            src="img/examples_hero.webp"
+                            alt="Pages of site"
+                            class="hero__img-examples"
+                            width="291"
+                            height="164"
+                        >
+                    </figure>
                 </div>
-                <figure class="hero__img-container">
-                    <img
-                        src="img/ornaments-min.png"
-                        alt="Ornaments"
-                        width="624"
-                        height="544"
-                    >
-                    <!-- <img
-                        src="img/ui_hero.webp"
-                        alt="Ui design"
-                        class="hero__image-ui"
-                        width="281"
-                        height="422"
-                    >
-                    <img
-                        src="img/screens_hero.webp"
-                        alt="Event screens"
-                        class="hero__img-screens"
-                        width="514"
-                        height="299"
-                    >
-                    <img
-                        src="img/examples_hero.webp"
-                        alt="Pages of site"
-                        class="hero__img-examples"
-                        width="291"
-                        height="164"
-                    > -->
-                </figure>
             </section>
 
-            <section class="products" aria-label="Products">
+            <section class="products container" aria-label="Products">
                 <a href="#" class="products__links">
                     <figure class="products__item">
                         <div class="products__img-container">
@@ -243,7 +236,7 @@
                                 <use xlink:href="img/sprite.svg#ui-kits-ico"></use>
                             </svg>
                             <div class="categories__cards-text-wrap">
-                                <h4 class="categories__cards-title">Templates</h4>
+                                <h2 class="categories__cards-title">Templates</h2>
                                 <div class="categories__cards-category-wrap">
                                     <p class="categories__cards-category">For all needs</p>
                                     <p class="categories__cards-category">Modern</p>
@@ -261,7 +254,7 @@
                                 <use xlink:href="img/sprite.svg#presentation-ico"></use>
                             </svg>
                             <div class="categories__cards-text-wrap">
-                                <h4 class="categories__cards-title">Slides</h4>
+                                <h2 class="categories__cards-title">Slides</h2>
                                 <div class="categories__cards-category-wrap">
                                     <p class="categories__cards-category">Pitch-ready</p>
                                     <p class="categories__cards-category">Creative</p>
@@ -279,7 +272,7 @@
                                 <use xlink:href="img/sprite.svg#presentation-ico"></use>
                             </svg>
                             <div class="categories__cards-text-wrap">
-                                <h4 class="categories__cards-title">Lorem</h4>
+                                <h2 class="categories__cards-title">Lorem</h2>
                                 <div class="categories__cards-category-wrap">
                                     <p class="categories__cards-category">Lorem</p>
                                     <p class="categories__cards-category">Lorem</p>
@@ -297,7 +290,7 @@
                                 <use xlink:href="img/sprite.svg#illustrations-ico"></use>
                             </svg>
                             <div class="categories__cards-text-wrap">
-                                <h4 class="categories__cards-title">Design Tools</h4>
+                                <h2 class="categories__cards-title">Design Tools</h2>
                                 <div class="categories__cards-category-wrap">
                                     <p class="categories__cards-category">Easy to use</p>
                                     <p class="categories__cards-category">Unique</p>
@@ -315,7 +308,7 @@
                                 <use xlink:href="img/sprite.svg#social-media-ico"></use>
                             </svg>
                             <div class="categories__cards-text-wrap">
-                                <h4 class="categories__cards-title">App Icons</h4>
+                                <h2 class="categories__cards-title">App Icons</h2>
                                 <div class="categories__cards-category-wrap">
                                     <p class="categories__cards-category">High-quality</p>
                                     <p class="categories__cards-category">Elegant</p>
@@ -333,7 +326,7 @@
                                 <use xlink:href="img/sprite.svg#social-media-ico"></use>
                             </svg>
                             <div class="categories__cards-text-wrap">
-                                <h4 class="categories__cards-title">Lorem</h4>
+                                <h2 class="categories__cards-title">Lorem</h2>
                                 <div class="categories__cards-category-wrap">
                                     <p class="categories__cards-category">Lorem</p>
                                     <p class="categories__cards-category">Lorem</p>
@@ -352,7 +345,7 @@
                     <p class="categories__description">
                         From fonts and icons to mockups and templates, our   comprehensive categories ensure that you find exactly what you need to your projects.
                     </p>
-                    <a class="categories__button" href="catalog.html">
+                    <a class="categories__button brand-color-button" href="catalog.html">
                         Shop Now
                     </a>
                 </div>
@@ -370,7 +363,7 @@
                             id="id-trending-buttons-prev"
                             aria-controls="id-trending-cards"
                             aria-label="Previous cards"
-                            class="trending__button-prev trending__button"
+                            class="trending__button-prev trending__button brand-light-color-button"
                         >
                             <svg
                                 class="trending__button-svg"
@@ -386,7 +379,7 @@
                             id="id-trending-buttons-next"
                             aria-controls="id-trending-cards"
                             aria-label="Next cards"
-                            class="trending__button-next trending__button"
+                            class="trending__button-next trending__button brand-light-color-button"
                         >
                         <svg
                             class="trending__button-svg"
@@ -409,7 +402,7 @@
                             <use xlink:href="img/sprite.svg#trending-cards-ico"></use>
                         </svg>
                         <img
-                            src="img/popular_1.webp"
+                            src="img/popular_4.webp"
                             alt="Design for travel"
                             class="trending__cards-image"
                             width="305"
@@ -440,7 +433,7 @@
                             <use xlink:href="img/sprite.svg#trending-cards-ico"></use>
                         </svg>
                         <img
-                            src="img/popular_2.webp"
+                            src="img/popular_3.webp"
                             alt="Design for healthcare"
                             class="trending__cards-image"
                             width="305"
@@ -471,7 +464,7 @@
                             <use xlink:href="img/sprite.svg#trending-cards-ico"></use>
                         </svg>
                         <img
-                            src="img/popular_3.webp"
+                            src="img/popular_2.webp"
                             alt="Design for food"
                             class="trending__cards-image"
                             width="305"
@@ -502,7 +495,7 @@
                             <use xlink:href="img/sprite.svg#trending-cards-ico"></use>
                         </svg>
                         <img
-                            src="img/popular_4.webp"
+                            src="img/popular_1.webp"
                             alt="Design for real estate"
                             class="trending__cards-image"
                             width="305"
@@ -592,7 +585,7 @@
                 <div class="faq__text-container">
                     <h2 class="faq__header">F.A.Q</h2>
                     <h3 class="faq__title">Answers to Your Questions</h3>
-                    <a href="contacts.html" class="faq__header-link">
+                    <a href="contacts.html" class="faq__header-link brand-light-color-button">
                         Ask Us A Question
                     </a>
                 </div>
@@ -643,8 +636,16 @@
                 <div class="blog__text-container">
                     <h2 class="blog__header visually-hidden">Blog</h2>
                     <h3 class="blog__title">Latest Expert</h3>
-                    <a href="catalog.html" class="blog__title-link">
+                    <a href="catalog.html" class="blog__title-link brand-color-links">
                         Explore All Articles
+                        <svg
+                                class="blog-details__title-link-icon"
+                                width="16"
+                                height="16"
+                                aria-hidden="true"
+                            >
+                                <use xlink:href="img/sprite.svg#arrow-left-link"></use>
+                            </svg>
                     </a>
                 </div>
                 <div class="blog__articles"> 
@@ -708,10 +709,10 @@
         </main>
 
         <footer class="footer">
-            <div class="footer__main-wrap">
+            <div class="footer__main-wrap container">
                 <div class="footer__content">
-                    <div class="footer__logo-description">
-                        <a href="" class="footer__logo-home-link" href="index.html">
+                    <div class="footer__logo-description-wrap">
+                        <a href="index.html" class="footer__logo-home-link">
                             <svg
                                 class="footer__logo"
                                 width="300"
@@ -802,7 +803,7 @@
                         <li class="footer__social-media-item">
                             <a
                                 href="#"
-                                class="footer__social-media-links"
+                                class="footer__social-media-links brand-light-color-button"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -818,7 +819,7 @@
                         <li class="footer__social-media-item">
                             <a
                                 href="#"
-                                class="footer__social-media-links"
+                                class="footer__social-media-links brand-light-color-button"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -834,7 +835,7 @@
                         <li class="footer__social-media-item">
                             <a
                                 href="#"
-                                class="footer__social-media-links"
+                                class="footer__social-media-links brand-light-color-button"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -865,14 +866,14 @@
                             required
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         >
-                        <button type="submit" class="newsletter__form-button">
+                        <button type="submit" class="newsletter__form-button brand-color-button">
                             Subscribe
                         </button>
                     </form>
                 </div>
             </div>
             <div class="footer__bottom-bar">
-                <div class="footer__copyright-container">
+                <div class="footer__copyright-container  container">
                     <nav class="footer__copyright-navigation">
                         <ul class="footer__copyright-list">
                             <li class="footer__copyright-item">
