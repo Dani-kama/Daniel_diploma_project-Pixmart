@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/double_range_input_catalog.js" defer></script>
         <meta name="color-scheme" content="light">
     </head>
 
@@ -334,9 +335,7 @@
                             </div>
                         </fieldset>
                         <fieldset class="side-filters__form-price">
-                            <legend class="side-filters__form-style-price">
-                                Price
-                            </legend>
+                            <legend class="side-filters__form-style-price">Price</legend>
                             <div class="side-filters__form-range-wrap">
                                 <label for="id-min-range" class="side-filters__form-range-label visually-hidden">
                                     Min Price
@@ -362,19 +361,14 @@
                                     name="max-range"
                                     class="side-filters__form-range-max"
                                 >
+                                <div class="side-filters__form-range-track"></div>
                             </div>
                             <div class="side-filters__form-range-values-wrap">
                                 <p class="side-filters__form-range-value">
-                                    €
-                                    <span class="side-filters__form-range-numbers">
-                                        5
-                                    </span>
+                                    € <span id="min-value" class="side-filters__form-range-numbers">5</span>
                                 </p>
                                 <p class="side-filters__form-range-value">
-                                    €
-                                    <span class="side-filters__form-range-numbers">
-                                        50
-                                    </span>
+                                    € <span id="max-value" class="side-filters__form-range-numbers">50</span>
                                 </p>
                             </div>
                         </fieldset>

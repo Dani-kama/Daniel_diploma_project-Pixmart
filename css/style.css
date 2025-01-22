@@ -1961,13 +1961,9 @@ button {
 }
 
 .side-filters__form-range-wrap {
-    display: flex;
-    flex-direction: row;
-}
-
-.side-filters__form-range-values-wrap {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    height: 18px;
+    margin-top: 23px;
 }
 
 .side-filters__form-range-value {
@@ -1975,6 +1971,64 @@ button {
     font-weight: var(--font-weight-small);
     line-height: var(--font-line-height-medium);
     letter-spacing: 0px;
+}
+
+.side-filters__form-price {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.side-filters__form-range-min,
+.side-filters__form-range-max {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    margin: 0;
+    background: none;
+    pointer-events: none;
+    top: -10px;
+}
+
+.side-filters__form-range-min::-webkit-slider-thumb,
+.side-filters__form-range-max::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+transform: translateY(16px);
+}
+
+.side-filters__form-range-min::-moz-range-thumb,
+.side-filters__form-range-max::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.side-filters__form-range-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(29, 54, 83, 0.17);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.side-filters__form-range-values-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1px;
+    font-size: 16px;
 }
 
 .side-filters__form-reset {
@@ -1985,7 +2039,7 @@ button {
     letter-spacing: 0px;
     width: 217px;
     height: 40px;
-    margin-top: 66px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
