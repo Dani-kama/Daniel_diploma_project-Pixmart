@@ -1591,10 +1591,9 @@ button {
     padding-bottom: 58px;
 }
 
-.catalog_main {
+.catalog__grid-wrap {
     display: grid;
     grid-template-areas:
-        "heading heading"
         "sidefilters content";
     grid-template-columns: 217px auto;
     grid-template-rows: 1fr;
@@ -1606,10 +1605,10 @@ button {
 }
 
 .catalog {
-    grid-area: heading;
-    background-image: url(/);
-    background-size: 100% auto;
-    background-attachment: local;
+    background-image: url("/img/mask_background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .catalog__heading {
@@ -2954,12 +2953,14 @@ transform: rotate(180deg);
 }
 
 .contact {
-    padding-inline: 80px;
+    background: linear-gradient(180.00deg, rgb(240, 246, 253),rgba(255, 255, 255, 0) 100%);
+}
+
+.contact__container {
     padding-top: 64px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    max-width: 1440px;
     gap: 38px;
     justify-content: space-between;
 }
@@ -3019,6 +3020,7 @@ transform: rotate(180deg);
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
+    width: fit-content;
 }
 
 .contact__information-list {
@@ -3201,7 +3203,14 @@ transform: rotate(180deg);
     border: none;
 }
 
-
+.contact__form-input-name:valid,
+.contact__form-input:valid,
+.contact__form-subject:valid,
+.contact__form-textarea:valid,
+.newsletter__email-input{
+    outline: 1px solid rgba(29, 54, 83, 0.17);
+}
+.content__filters-select-input:hover,
 .contact__form-input-name:hover,
 .contact__form-input:hover,
 .contact__form-subject:hover,
@@ -3211,6 +3220,7 @@ transform: rotate(180deg);
     outline: 2px solid rgb(56, 146, 243);
 }
 
+.content__filters-select-input:focus-visible,
 .contact__form-input-name:focus-visible,
 .contact__form-input:focus-visible,
 .contact__form-subject:focus-visible,
@@ -3228,14 +3238,7 @@ transform: rotate(180deg);
     outline: 1px solid rgb(234, 56, 41);
 }
 
-.contact__form-input-name:valid,
-.contact__form-input:valid,
-.contact__form-subject:valid,
-.contact__form-textarea:valid,
-.newsletter__email-input{
-    outline: 1px solid rgba(29, 54, 83, 0.17);
-}
-
+.content__filters-select-input:disabled,
 .contact__form-input-name:disabled,
 .contact__form-input:disabled,
 .contact__form-subject:disabled,
@@ -3305,6 +3308,29 @@ transform: rotate(180deg);
 .contact__form-subject {
     padding: 18px 19px 18px 19px;
     appearance: none;
+    width: 100%;
+}
+
+.contact__form-subject-wrap {
+    position: relative;
+}
+
+.contact__form-subject-wrap:after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    top: 22px;
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url("/img/chevron_down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    transform: rotate(360deg);
+    padding: 2px;
+    color: rgb(13, 13, 21);
+    pointer-events: none;
 }
 
 .contact__form-textarea {
