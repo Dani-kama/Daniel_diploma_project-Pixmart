@@ -1723,6 +1723,7 @@ body {
     margin: 5px;
     border-radius: 50%;
     padding: 4.5px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), border var(--transition-duration) var(--transition-timing-function);
 }
 
 .side-filters__format-radio:hover+ .side-filters__format-radio-label:before {
@@ -1813,19 +1814,20 @@ body {
     position: absolute;
     margin: 5px;
     outline-offset: -0.5px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .side-filters__categories-check-box:hover+ .side-filters__categories-check-label:before {
-    background: var(--color-brand-alternative);
+    background-color: var(--color-brand-alternative);
 }
 
 .side-filters__categories-check-box:focus-visible+.side-filters__categories-check-label:before {
     outline: 3px solid rgb(56, 146, 243);
-    background: rgb(248, 250, 252);
+    background-color: rgb(248, 250, 252);
 }
 
 .side-filters__categories-check-box:active+ .side-filters__categories-check-label:before {
-    background: rgb(181, 222, 255);
+    background-color: rgb(181, 222, 255);
     outline: none;
 }
 
@@ -1898,7 +1900,7 @@ body {
     display: inline-block;
     width: 40px;
     height: 20px;
-    background: rgba(34, 52, 72, 0.4);
+    background-color: rgba(34, 52, 72, 0.4);
     border-radius: 25px;
     position: relative;
 }
@@ -1911,14 +1913,14 @@ body {
     left: 2px;
     width: 17px;
     height: 17px;
-    background: var(--color-bg-base);
+    background-color: var(--color-bg-base);
     border-radius: 50%;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .side-filters__style-toggle:checked + .side-filters__style-toggle-label .toggle-slider {
-    background: var(--color-brand)
+    background-color: var(--color-brand)
 }
 
 .side-filters__style-toggle:checked + .side-filters__style-toggle-label .toggle-slider::before {
@@ -1926,27 +1928,27 @@ body {
 }
 
 .side-filters__style-toggle:checked:hover+ .side-filters__style-toggle-label .toggle-slider {
-    background: rgb(56, 146, 243);
+    background-color: rgb(56, 146, 243);
 }
 
 .side-filters__style-toggle:checked:focus-visible+ .side-filters__style-toggle-label .toggle-slider {
-    background: var(--color-brand);
+    background-color: var(--color-brand);
     outline: 2px solid rgb(56, 146, 243);
     border: 1px solid var(--color-bg-base);
 }
 
 .side-filters__style-toggle:not(:checked):hover + .side-filters__style-toggle-label .toggle-slider {
-    background: rgba(30, 49, 71, 0.27);
+    background-color: rgba(30, 49, 71, 0.27);
 }
 
 .side-filters__style-toggle:not(:checked):focus-visible+ .side-filters__style-toggle-label .toggle-slider {
-    background: rgba(34, 52, 72, 0.4);
+    background-color: rgba(34, 52, 72, 0.4);
     outline: 2px solid rgb(56, 146, 243);
     border: 1px solid var(--color-bg-base);
 }
 
 .side-filters__style-toggle:not(:checked):active+ .side-filters__style-toggle-label .toggle-slider {
-    background: rgba(42, 52, 64, 0.85);
+    background-color: rgba(42, 52, 64, 0.85);
 }
 
 .side-filters__style-toggle:not(:checked):active+ .toggle-slider::before {
@@ -1956,7 +1958,7 @@ body {
     left: 2px;
     width: 17px;
     height: 17px;
-    background: rgb(29, 28, 40);
+    background-color: rgb(29, 28, 40);
     border-radius: 50%;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -2059,12 +2061,13 @@ transform: translateY(16px);
     outline: 2px solid rgba(29, 54, 83, 0.17);
     border-radius: 8px;
     padding: 10px 20px 9px 20px;
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     flex-wrap: nowrap;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     outline-offset: -2px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .side-filters__form-reset svg {
@@ -2102,7 +2105,8 @@ transform: translateY(16px);
     height: 40px;
     display: flex;
     box-sizing: border-box;
-    border: 1px solid rgba(29, 54, 83, 0.17);
+    outline: 1px solid rgba(29, 54, 83, 0.17);
+    border: none;
     border-radius: 8px;
     color: var(--color-text-primary);
     font-size: var(--font-size-headings);
@@ -2115,6 +2119,7 @@ transform: translateY(16px);
     justify-content: center;
     padding: 8px 20px 8px 20px;
     position: relative;
+    transition: outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .content__filters-select-input-wrap {
@@ -2169,7 +2174,7 @@ transform: translateY(16px);
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    background: rgb(248, 247, 255);
+    background-color: rgb(248, 247, 255);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2177,27 +2182,28 @@ transform: translateY(16px);
     padding: 8px;
     color: var(--color-text-primary);
     outline: 1px solid rgba(29, 54, 83, 0.17);
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 .content__view-button:hover {
-    outline: none;
-    background: var(--color-brand);
+    outline: 1px solid transparent;
+    background-color: var(--color-brand);
     color: rgb(248, 247, 255);
 }
 
 .content__view-button:focus-visible {
     outline: 4px solid rgb(56, 146, 243);
     color: rgb(248, 247, 255);
-    background: rgb(56, 146, 243);
+    background-color: rgb(56, 146, 243);
 }
 
 .content__view-button:active {
-    background: rgb(0, 84, 182);
+    background-color: rgb(0, 84, 182);
     color: rgb(248, 247, 255);
 }
 
 .content__view-button:disabled {
-    background: rgba(29, 54, 83, 0.17);
+    background-color: rgba(29, 54, 83, 0.17);
     color: rgb(248, 247, 255);
 }
 
@@ -2272,6 +2278,7 @@ transform: translateY(16px);
 
 .content__card:hover .content__price {
     color: var(--color-brand);
+    transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 
@@ -2440,6 +2447,7 @@ position: relative;
     height: 37px;
     background-color: var(--color-bg-base);
     border: 2px solid  transparent;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .content__button-cart {
@@ -2447,7 +2455,8 @@ position: relative;
     width: 40px;
     height: 40px;
     padding: 8px;
-    background: var(--color-brand);
+    background-color: var(--color-brand);
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .content__action-button {
@@ -2465,9 +2474,10 @@ position: relative;
     width: fit-content;
     margin-top: 16px;
     margin-inline: auto;
-    border: 2px solid rgba(29, 54, 83, 0.17);
+    outline: 2px solid rgba(29, 54, 83, 0.17);
     border-radius: 8px;
-    background: rgb(255,255,255);
+    background-color: rgb(255,255,255);
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .blog-details {
