@@ -55,6 +55,11 @@
     --color-brand-buttons: rgba(245, 248, 251, 1);
     --color-bg-base-invert: var(--color-text-primary);
     --color-titles: rgb(34, 34, 34);
+
+    --transition-duration: 0.3s;
+    --transition-timing-function: ease-in-out;
+    --transition-delay-0: 0s;
+    --transition-delay-0: 0,4s;
 }
 
 * {
@@ -149,23 +154,25 @@ body {
     height: 40px;
     box-sizing: border-box;
     flex-shrink: 0;
+    outline: 4px solid transparent;
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .header__card-button:hover {
-    background: rgb(56, 146, 243);
+    background-color: rgb(56, 146, 243);
 }
 
 .header__card-button:focus-visible {
     outline: 4px solid rgb(56, 146, 243);
-    background: var(--color-brand);
+    background-color: var(--color-brand);
 }
 
 .header__card-button:active {
-    background: rgb(0, 84, 182);
+    background-color: rgb(0, 84, 182);
 }
 
 .header__card-button:disabled {
-    background: rgba(29, 54, 83, 0.17);
+    background-color: rgba(29, 54, 83, 0.17);
 }
 
 .nav-menu {
@@ -194,7 +201,8 @@ body {
     color: var(--color-text-primary);
     text-overflow: ellipsis;
     overflow: hidden;
-}
+    transition: color var(--transition-duration) var(--transition-timing-function);
+    }
 
 .nav-menu__link:hover {
     color: rgb(56, 146, 243);
@@ -282,10 +290,11 @@ body {
     font-weight: var(--font-weight-large);
     border-radius: 8px;
     padding: 18px 32px;
-    background: var(--color-brand);
+    background-color: var(--color-brand);
     color: var(--color-brand-buttons);
     height: 64px;
     white-space: nowrap;
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .hero__buttons:hover {
@@ -315,10 +324,12 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
-    background: var(--color-bg-base);
+    background-color: var(--color-bg-base);
     margin-left: 16px;
     height: 64px;
     white-space: nowrap;
+    outline: 1px solid transparent;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .hero__buttons-social:hover {
@@ -431,12 +442,13 @@ body {
 .products__img-container {
     border-radius: 20px;
     padding: 36px;
-    background: var(--color-brand-alternative);
+    background-color: var(--color-brand-alternative);
     color: var(--color-brand);
+    transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 .products__img-container:hover {
-    background: var(--color-brand);
+    background-color: var(--color-brand);
 }
 
 .products__img-container:hover svg {
@@ -531,7 +543,7 @@ body {
 }
 
 .categories__cards {
-    background: var(--color-brand-alternative);
+    background-color: var(--color-brand-alternative);
     display: flex;
     gap: 16px;
     padding: 24px 24px;
@@ -539,6 +551,7 @@ body {
     flex-direction: column;
     color: var(--color-brand);
     max-width: 220px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 .categories__cards:hover {
@@ -547,6 +560,7 @@ body {
 
 .categories__cards:hover .categories__cards-title {
     color: rgb(248, 247, 255);
+    transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .categories__cards:hover svg {
@@ -650,6 +664,7 @@ body {
     white-space: nowrap;
     border-radius: 8px;
     height: 64px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 
@@ -708,6 +723,7 @@ body {
     outline: 2px solid rgba(29, 54, 83, 0.17);
     background-color: rgb(255 255 255);
     padding: 20px 20px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .trending__button-next .trending__button-svg {
@@ -735,15 +751,28 @@ body {
     overflow: hidden;
 }
 
+
+
 .trending__cards:hover .trending__cards-button-wrap{
     opacity: 100%;
+    visibility: visible;
+    transform: translateY(0px);
 }
 
 .trending__cards:hover
+.trending__cards-image {
+    opacity: 34%;
+}
+
+.trending__cards:hover
+.trending__cards-svg {
+    opacity: 34%;
+}
+
 .trending__cards-image,
 .trending__cards-svg {
-    background: rgba(231, 238, 247,);
-    opacity: 34%;
+    background-color: rgba(231, 238, 247);
+    opacity: 100%;
 }
 
 .trending__cards-svg {
@@ -817,16 +846,20 @@ body {
 }
 
 .trending__cards-button-wrap {
+    position: absolute;
+    inset: 0;
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin-top: 48px;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-top: -86px;
     flex-wrap: wrap;
     max-width: 1440px;
-    justify-content: flex-start;
     overflow: hidden;
     opacity: 0%;
+    transform: translateY(103px);
+    transition: opacity 0.5s var(--transition-timing-function), transform 0.4s var(--transition-timing-function);
 }
 
 .trending__card-link {
@@ -851,18 +884,6 @@ body {
     color: rgba(34, 52, 73, 0.4);
 }
 
-
-.trending__cards-button-wrap {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 2;
-    margin-top: 104px;
-}
-
 .trending__card-link {
     padding: 18px 78px;
     border-radius: 8px;
@@ -871,6 +892,7 @@ body {
     font-weight: var(--font-weight-large);
     font-size: var(--font-size-medium);
     line-height: var(--font-line-height-large);
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .trending__cards-category:not(:last-of-type):after {
@@ -932,6 +954,8 @@ body {
     background: #fff;
     position: relative;
     width: 416px;
+    outline: 2px solid transparent;
+    transition: transform var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .pricing-plan__cards:hover {
@@ -1048,6 +1072,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 .pricing-plan__cards-link:hover {
@@ -1058,6 +1083,7 @@ body {
 .pricing-plan__cards-link:focus-visible {
     outline: 4px solid rgb(56, 146, 243);
     background: var(--color-brand);
+    color: var(--color-brand-buttons);
 }
 
 .pricing-plan__cards-link:active {
@@ -1118,6 +1144,7 @@ body {
     padding: 17px;
     padding: 18px 32px 18px 32px;
     height: 64px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .faq__content {
@@ -1152,11 +1179,13 @@ body {
     padding-bottom: 24px;
     position: relative;
     padding-right: 24px;
+    outline: 2px solid transparent;
+    transition: outline var(--transition-duration) var(--transition-timing-function);
 }
 
 
 .faq__content-item:hover {
-    outline: 2px solid var(--color-brand);;
+    outline: 2px solid var(--color-brand);
 }
 
 .faq__content-item[open] {
@@ -1241,6 +1270,7 @@ body {
     flex-wrap: nowrap;
     white-space: nowrap;
     text-overflow: ellipsis;
+    transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .blog__articles {
@@ -1282,8 +1312,10 @@ body {
 }
 
 .blog__article-thumbnail {
+    outline: 2px solid transparent;
     border-radius: 20px;
     object-fit: cover;
+    transition: outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .blog__article-thumbnail:hover {
@@ -1405,6 +1437,7 @@ body {
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-small);
     line-height: var(--font-line-height-medium);
+    transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer__links:hover {
@@ -1456,6 +1489,8 @@ body {
     height: 64px;
     padding: 18px;
     border: 2px solid transparent;
+    background-color: rgb(255, 255, 255);
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .newsletter__form {
@@ -1499,6 +1534,8 @@ body {
     border: none;
     color: var(--color-brand-buttons);
     height: 64px;
+    outline: 4px solid transparent;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function);
 }
 
 .newsletter__form-button:hover {
@@ -3229,6 +3266,8 @@ transform: rotate(180deg);
     border-radius: 8px;
     background: var(--color-bg-base);
     border: none;
+    transition: outline var(--transition-duration) var(--transition-timing-function);
+
 }
 
 .contact__form-input-name:valid,
