@@ -3090,7 +3090,7 @@ transform: rotate(180deg);
     letter-spacing: 0px;
     padding: 20px 20px 20px 20px;
     border-radius: 8px;
-    background: var(--color-brand);
+    background-color: var(--color-brand);
     margin-top: 32px;
     height: 64px;
     border: none;
@@ -3100,6 +3100,7 @@ transform: rotate(180deg);
     overflow-x: hidden;
     white-space: nowrap;
     width: fit-content;
+    transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contact__information-list {
@@ -3331,42 +3332,42 @@ transform: rotate(180deg);
 }
 
 .brand-color-button:hover{
-    background: rgb(56, 146, 243);
+    background-color: rgb(56, 146, 243);
 }
 
 .brand-color-button:focus-visible{
     outline: 4px solid rgb(56, 146, 243);
-    background: var(--color-brand);
+    background-color: var(--color-brand);
 }
 
 .brand-color-button:active{
-    background: rgb(0, 84, 182);
+    background-color: rgb(0, 84, 182);
 }
 
 .brand-color-button:disabled{
-    background: rgba(29, 54, 83, 0.17);
+    background-color: rgba(29, 54, 83, 0.17);
     color: rgba(34, 52, 73, 0.4);
 }
 
 .brand-light-color-button:hover {
     outline: 2px solid rgba(29, 54, 83, 0.17);
-    background: rgba(41, 77, 117, 0.09);
+    background-color: rgba(41, 77, 117, 0.09);
 }
 
 .brand-light-color-button:focus-visible {
     outline: 4px solid rgb(56, 146, 243);
-    background: rgba(41, 77, 117, 0.09);
+    background-color: rgba(41, 77, 117, 0.09);
 }
 
 .brand-light-color-button:active {
     outline: 2px solid rgba(29, 54, 83, 0.17);
-    background: rgba(41, 77, 117, 0.09);
+    background-color: rgba(41, 77, 117, 0.09);
 }
 
 .brand-light-color-button:disabled {
-    background: rgba(255, 255, 255, 0.17);
+    background-color: rgba(255, 255, 255, 0.17);
     outline: 2px solid rgba(29, 54, 83, 0.17);
-    background: rgba(29, 54, 83, 0.17);
+    background-color: rgba(29, 54, 83, 0.17);
     color: rgba(34, 52, 73, 0.4);
 }
 
@@ -3474,6 +3475,7 @@ transform: rotate(180deg);
     top: -2px;
     position: absolute;
     margin: 5px;
+    transition: background-color var(--transition-duration) var(--transition-timing-function), outline var(--transition-duration) var(--transition-timing-function), color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contact__subscribe-policy-check:hover+ .contact__subscribe-policy-label:before {
@@ -3541,5 +3543,6 @@ transform: rotate(180deg);
     height: 64px;
     white-space: nowrap;
     overflow: hidden;
+    transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
 
